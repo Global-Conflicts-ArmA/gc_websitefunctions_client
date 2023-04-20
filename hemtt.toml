@@ -1,6 +1,6 @@
-name = "Gruppe Adler Admin Messages"
+name = "GC Website Functions Client"
 prefix = "gc_websiteFunctionsClient"
-author = "McDiod, Salbei"
+author = "W-Cephei"
 files = [
     "mod.cpp"
 ]
