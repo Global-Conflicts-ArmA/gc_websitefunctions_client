@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {};
         authors[] = {"DerZade [A]","Salbei"};
-        VERSION_CONFIG;
+     
     };
 };
 

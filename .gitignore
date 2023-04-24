@@ -5,7 +5,8 @@ keys/*
 .hemtt/local
 /a3/
 /x/
-
+.vscode
+.hemttout
 *.pbo
 *.cache
 *.biprivatekey

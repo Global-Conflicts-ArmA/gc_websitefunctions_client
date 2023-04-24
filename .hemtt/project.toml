@@ -1,0 +1,15 @@
+name = "GC Website Functions Client"
+prefix = "gc_websiteFunctionsClient"
+author = "W-Cephei"
+
+
+
+key_name = "{{prefix}}_{{version}}"
+
+
+releasebuild = [
+    "@zip gc_websiteFunctionsClient_{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
+]
+
+[lint.sqf]
+enabled = true

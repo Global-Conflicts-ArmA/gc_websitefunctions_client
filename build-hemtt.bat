@@ -14,7 +14,7 @@ if exist x\gc_websiteFunctionsClient\addons (
 mklink /j x\gc_websiteFunctionsClient\addons addons
 
 IF [%1] == [] (
-  tools\hemtt build --force --release
+  tools\hemtt release
 ) ELSE (
   tools\hemtt build %1
 )
