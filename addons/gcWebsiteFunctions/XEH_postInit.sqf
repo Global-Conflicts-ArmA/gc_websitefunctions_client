@@ -70,7 +70,7 @@ private _getBugReportsResponseId = ["gc_getBugReportsResponse", {
 												BIS_Message_Confirmed = true;
 												SETPVAR(player,sendingInProgress,true);
 												private _message = GETVAR(player,missionBugReportText,"");
-												systemChat "GC Mission Bug Report | Please wait, submitting but report.";
+												systemChat "GC Mission Bug Report | Please wait, submitting bug report.";
 												["gc_onSubmitBugReport", [_message, player]] call CBA_fnc_serverEvent;
 											}
 										],
