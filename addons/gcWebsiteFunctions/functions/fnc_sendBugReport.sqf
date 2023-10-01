@@ -20,8 +20,10 @@ private _message = ctrlText _editBox;
 if (_message == "") exitWith {};
 SETPVAR(player,missionBugReportText,_message); // sets the text to the player vars so I can get it inside the callback of the BIS_fnc_3DENShowMessage
 
-findDisplay 49 closeDisplay 1;
-//list current bug reports
+																																																																																																																																										private _isSpectating = ["IsSpectating"] call BIS_fnc_EGSpectator;
+if (!_isSpectating) then {
+	findDisplay 49 closeDisplay 1;
+};
 
  
 ["gc_onGetBugReports", [player]] call CBA_fnc_serverEvent;
@@ -30,3 +32,11 @@ findDisplay 49 closeDisplay 1;
 systemChat "GC Mission Bug Report | Please wait, fetching current bug reports.";
 
 playSoundUI ["a3\sounds_f\sfx\beep_target.wss"];
+
+
+
+
+
+
+
+

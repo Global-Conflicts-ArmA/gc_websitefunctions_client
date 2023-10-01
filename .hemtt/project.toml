@@ -1,5 +1,5 @@
 name = "GC Website Functions Client"
-prefix = "gc_websiteFunctionsClient"
+prefix = "gc"
 author = "W-Cephei"
 
 
@@ -8,7 +8,7 @@ key_name = "{{prefix}}_{{version}}"
 
 
 releasebuild = [
-    "@zip gc_websiteFunctionsClient_{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
+    "@zip gc_{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
 ]
 
 [lint.sqf]

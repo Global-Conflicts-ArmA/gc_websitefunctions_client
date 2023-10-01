@@ -35,10 +35,7 @@ private _bugReportResponseId = ["gc_bugReportResponse", {
 	};
 }] call CBA_fnc_addEventHandler;
 
-
-
  
-
 private _getBugReportsResponseId = ["gc_getBugReportsResponse", {
 	params ["_response", "_message"];
 	SETPVAR(player,sendingInProgress,false);
@@ -47,10 +44,6 @@ private _getBugReportsResponseId = ["gc_getBugReportsResponse", {
 	
 		if (_success) then {
 			//show bug reports
-
- 
-
-
 			if(count (_response select 0) > 0 ) then{
 				[ 
 					[_response select 0], 
@@ -130,10 +123,6 @@ private _getBugReportsResponseId = ["gc_getBugReportsResponse", {
 		playSoundUI ["a3\sounds_f\debugsound.wss"];
 	};
 }] call CBA_fnc_addEventHandler;
-
-
-
-
 
 
 private _ratingResponseId = ["gc_ratingResponse", {

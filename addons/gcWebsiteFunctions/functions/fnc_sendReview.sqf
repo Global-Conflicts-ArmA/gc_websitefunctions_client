@@ -30,7 +30,12 @@ private _message = ctrlText _editBox;
 if (_message == "") exitWith {};
 SETPVAR(player,missionReviewText,_message); // sets the text to the player vars so I can get it inside the callback of the BIS_fnc_3DENShowMessage
 
-findDisplay 49 closeDisplay 1;
+private _isSpectating = ["IsSpectating"] call BIS_fnc_EGSpectator;
+private _missionDisplay = nil;
+if (!_isSpectating) then {
+	findDisplay 49 closeDisplay 1;
+	_missionDisplay = [] call BIS_fnc_displayMission;
+};
 
 [_message] spawn {
 	params ["_message"];
@@ -43,9 +48,7 @@ findDisplay 49 closeDisplay 1;
 			[
 				"Yes",
 				{
-					BIS_Message_Confirmed = true;
-					SETPVAR(player,sendingInProgress,true);
-					private _message = GETVAR(player,missionReviewText,"");
+		 
 					["gc_onSubmitReview", [_message, player]] call CBA_fnc_serverEvent;
 				}
 			],
@@ -56,7 +59,7 @@ findDisplay 49 closeDisplay 1;
 				}
 			],
 			"\x\gc_websiteFunctionsClient\addons\gcWebsiteFunctions\data\gc_logo.paa",
-			[] call BIS_fnc_displayMission
+			_missionDisplay
 		] call BIS_fnc_3DENShowMessage;
 	}, [_message] ] call CBA_fnc_execNextFrame;
 };
